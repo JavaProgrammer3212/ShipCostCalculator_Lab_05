@@ -12,26 +12,29 @@ public class Main {
 
         System.out.println("Please input the price of your item: ");
 
-        double itemCost = in.nextDouble();
+        if (in.hasNextDouble()) {
 
-        if (itemCost >= 100) {
+            double itemCost = in.nextDouble();
 
-            shippingCost = 0;
+            in.nextLine();
 
-            System.out.println("The shipping cost of your item is free!");
+            if (itemCost >= 100) {
 
+                shippingCost = 0;
+
+                System.out.println("The shipping cost of your item is free!");
+
+            } else {
+
+                shippingCost = itemCost * 0.02;
+
+                System.out.println("The shipping cost of your item is $" + shippingCost);
+
+            }
+
+            totalCost = itemCost + shippingCost;
+
+            System.out.println("The total cost of your purchase will be $" + totalCost);
         }
-        else {
-
-            shippingCost = itemCost * 0.02;
-
-            System.out.println("The shipping cost of your item is $" + shippingCost);
-
-        }
-
-        totalCost = itemCost + shippingCost;
-
-        System.out.println("The total cost of your purchase will be $" + totalCost);
-
     }
 }
