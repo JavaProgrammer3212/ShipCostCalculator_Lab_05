@@ -4,7 +4,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+//        num itemPrice
+//
+//        num shippingCost
+//
+//        num totalCost
+//
+//        output “Please enter the price of your item:”
+//
+//        input itemPrice
+//
+//        if itemPrice >= 100 then
+//
+//          shippingCost = 0
+//
+//          output “Your shipping cost is free!”
+//
+//        else
+//
+//          shippingCost = itemPrice * 0.02
+//
+//          output “Your shipping cost is $” + shippingCost
+//
+//        end if
+//
+//        totalPrice = itemPrice + shippingCost
+//
+//        output “The total price of your purchase is $” + totalPrice
+
         Scanner in = new Scanner(System.in);
+
+        double itemCost;
 
         double shippingCost;
 
@@ -14,7 +44,7 @@ public class Main {
 
         if (in.hasNextDouble()) {
 
-            double itemCost = in.nextDouble();
+            itemCost = in.nextDouble();
 
             in.nextLine();
 
